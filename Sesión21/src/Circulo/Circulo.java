@@ -1,27 +1,28 @@
+package Circulo;
 /** Representa objetos CÃ­rculo, con un campo Radio
  *  @author los profesores de IP
  *  @version 1.0  */
 
-public class Círculo {
+public class Circulo {
 	
 	//CONSTRUCTORES
-	public Círculo() {
+	public Circulo() {
 		setX(1.0);
 		setY(1.0);
 		setRadio(1.0);
 	}
-	public Círculo(double x, double y, double r) {
+	public Circulo(double x, double y, double r) {
 		setX(x);
 		setY(y);
 		setRadio(r);
 	}
-	public Círculo(Círculo c) {
+	public Circulo(Circulo c) {
 		setX(c.getX());
 		setY(c.getY());
 		setRadio(c.getRadio());
 	}
 	
-	public void imprimeCírculo() {
+	public void imprimeCirculo() {
 		System.out.println(getX());
 		System.out.println(getY());
 		System.out.println(getRadio());
@@ -69,12 +70,12 @@ public class Círculo {
 	public double calculaPerÃ­metro() {
 		return 2*PI*radio;
 	}
-	public void copiaCentro(Círculo c) {
+	public void copiaCentro(Circulo c) {
 		this.setX(c.getX());
 		this.setY(c.getY());
 	}
 
-	public void ajustaRadio(Círculo c) {
+	public void ajustaRadio(Circulo c) {
 		double d = Math.sqrt(Math.pow(this.x-c.x,2)
 				+Math.pow(this.y-c.y,2));
 		this.setRadio(d);

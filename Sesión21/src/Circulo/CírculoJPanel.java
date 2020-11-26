@@ -1,6 +1,5 @@
-/** Representa objetos CÃ­rculo, con un campo Radio
- *  @author los profesores de IP
- *  @version 1.0  */
+package Circulo;
+
 //IMPORTAR PARA PINTAR
 import javax.swing.JPanel;
 import java.awt.Graphics;
@@ -26,7 +25,7 @@ public class CírculoJPanel extends JPanel {
 		setRadio(c.getRadio());
 	}
 	
-	public void imprimeCírculo() {
+	public void imprimeCirculo() {
 		System.out.println(getX());
 		System.out.println(getY());
 		System.out.println(getRadio());
@@ -34,7 +33,7 @@ public class CírculoJPanel extends JPanel {
 	}
 	
 
-//--------PINTA CÍRCULO-------------
+//--------PINTA CÃ�RCULO-------------
 	public void paintComponent (Graphics g) {
     	super.paintComponent(g);
     	
@@ -46,15 +45,15 @@ public class CírculoJPanel extends JPanel {
 
 //------------------------FIN DE MODIFICACIONES----------------------------------------
 	
-	/**Valor del radio del objeto CÃ­rculo*/
+	/**Valor del radio del objeto CÃƒÂ­rculo*/
 	private double radio;
 	private double x;
 	private double y;
 	
-	/**Constante matemÃ¡tica pi */
+	/**Constante matemÃƒÂ¡tica pi */
 	private static final double PI=3.1416;
 	
-	/**Devuelve el valor del radio del objeto CÃ­rculo
+	/**Devuelve el valor del radio del objeto CÃƒÂ­rculo
 	 * @return el radio del objeto */
 	public double getRadio() {
 		return radio;
@@ -73,12 +72,12 @@ public class CírculoJPanel extends JPanel {
 		y = nuevaY;
 	}
 
-	/**Devuelve el Ã¡rea del objeto CÃ­rculo
-	 * @return el valor del Ã¡rea del CÃ­rculo*/
+	/**Devuelve el ÃƒÂ¡rea del objeto CÃƒÂ­rculo
+	 * @return el valor del ÃƒÂ¡rea del CÃƒÂ­rculo*/
 	public double calculaArea() {
 		return PI*radio*radio;
 	}
-	public double calculaPerÃ­metro() {
+	public double calculaPerimetro() {
 		return 2*PI*radio;
 	}
 	public void copiaCentro(CírculoJPanel c) {
